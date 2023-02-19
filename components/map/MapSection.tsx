@@ -1,6 +1,6 @@
 import Map from "./Map";
 
-export default function MapSection() {
+const MapSection = () => {
   return (
     <Map
       onLoad={() => {
@@ -8,4 +8,6 @@ export default function MapSection() {
       }}
     />
   );
-}
+};
+
+export default MapSection;
