@@ -4,7 +4,9 @@
 
 body {
   font-family: -apple-system, Pretendard-Bold, sans-serif;
-  background-color: #eeeeee;
+  background-color: hsl(0, 0%, 93%);
+  max-width: 448px;
+  margin: auto;
 }
 
 @font-face {

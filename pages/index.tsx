@@ -10,6 +10,9 @@ export default function Home() {
       <Category />
       <main className="flex-1 mt-28 h-screen">
         <Card />
+        <Card />
+        <Card />
+        <Card />
       </main>
     </Fragment>
   );
