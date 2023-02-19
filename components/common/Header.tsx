@@ -1,6 +1,3 @@
-import Link from "next/link";
-import styles from "../../styles/common.module.css";
-
 function Header() {
   return (
     <div className="navbar bg-base-100">
