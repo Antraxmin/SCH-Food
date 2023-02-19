@@ -1,6 +1,6 @@
 export default function Category() {
   return (
-    <div className="w-full">
+    <div className="w-full flex justify-center">
       <ul className="menu menu-horizontal bg-base-100">
         <li>
           <a>한식</a>
@@ -19,9 +19,6 @@ export default function Category() {
         </li>
         <li>
           <a>포차</a>
-        </li>
-        <li>
-          <a>디저트</a>
         </li>
       </ul>
     </div>
