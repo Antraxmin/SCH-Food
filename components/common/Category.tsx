@@ -1,6 +1,6 @@
 export default function Category() {
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center bg-white mt-12 fixed top-4 z-30">
       <ul className="menu menu-horizontal bg-base-100">
         <li>
           <a>한식</a>
