@@ -2,19 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  font-family: -apple-system, Pretendard-Bold, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: "Pretendard-Bold";
+  font-weight: 200;
+  src: url("/fonts/Pretendard-Bold.ttf") format("truetype");
 }
