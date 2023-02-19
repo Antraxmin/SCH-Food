@@ -1,3 +1,11 @@
+import Map from "./Map";
+
 export default function MapSection() {
-  return <div className="w-full">지도</div>;
+  return (
+    <Map
+      onLoad={() => {
+        console.log("success loading");
+      }}
+    />
+  );
 }
