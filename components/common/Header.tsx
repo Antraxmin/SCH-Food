@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Header() {
   return (
     <div className="navbar bg-base-100 fixed top-0 z-50 max-w-md">
@@ -24,19 +26,18 @@ function Header() {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>소개</a>
+              <Link href={"/about"}>소개</Link>
             </li>
             <li>
-              <a>공지사항</a>
-            </li>
-            <li>
-              <a>제보하기</a>
+              <Link href={"/feedback"}>제보하기</Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost normal-case text-xl">순천향대 맛집알리미</a>
+        <Link href={"/"} className="btn btn-ghost normal-case text-xl">
+          순천향대 맛집알리미
+        </Link>
       </div>
       <div className="navbar-end">
         <button className="btn btn-ghost btn-circle">
