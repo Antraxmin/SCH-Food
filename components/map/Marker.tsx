@@ -11,7 +11,13 @@ const Marker = ({ map, coordinates, onClick }: Marker) => {
         position: new naver.maps.LatLng(...coordinates), // 표시할 위치
       });
     }
-  });
+    if (onClick) {
+      naver.maps.Event.addListener(marker, "clicked!", onClick);
+    }
+    return () => {
+      marker?.setMap(null);
+    };
+  }, [map]);
 };
 
 export default Marker;
