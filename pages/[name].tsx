@@ -1,12 +1,18 @@
 import { Store } from "@/types/store";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { useRouter } from "next/router";
 
 interface Props {
   store: Store;
 }
 
-const StoreDetail: NextPage<Props> = ({ store: Store }) => {
-  return <div>식당 상세 정보 페이지입니다.</div>;
+const StoreDetail: NextPage<Props> = ({ store }) => {
+  // 라우터가 fallback 상태인 경우 로딩 문구 출력
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>로딩중입니다</div>;
+  }
+  return <div>식당이름: {store?.name}</div>;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -27,3 +33,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
   return { props: { store } };
 };
+
+export default StoreDetail;
