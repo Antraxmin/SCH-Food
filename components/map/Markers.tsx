@@ -14,7 +14,18 @@ const Markers = () => {
     <>
       {stores.map((store) => {
         return (
-          <Marker map={map} coordinates={store.coordinates} key={store.nid} />
+          <Marker
+            map={map}
+            coordinates={store.coordinates}
+            key={store.nid}
+            title={store.name}
+            /*
+            icon={{
+              content: `<div style="text-align:center;background-color:white;">${store.name}</div>`,
+              size: new naver.maps.Size(38, 58),
+              anchor: new naver.maps.Point(19, 58),
+            }}*/
+          />
         );
       })}
     </>

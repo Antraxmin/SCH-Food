@@ -9,6 +9,7 @@ const Marker = ({ map, coordinates, onClick }: Marker): null => {
       marker = new naver.maps.Marker({
         map: map, // 표시할 지도 객체
         position: new naver.maps.LatLng(...coordinates), // 표시할 위치
+        //icon,
       });
     }
     if (onClick) {
