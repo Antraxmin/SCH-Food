@@ -18,10 +18,7 @@ export default function Category() {
           <a>양식</a>
         </li>
         <li>
-          <a>포차</a>
-        </li>
-        <li>
-          <a>카페</a>
+          <a>디저트</a>
         </li>
       </ul>
     </div>
