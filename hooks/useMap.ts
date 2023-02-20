@@ -5,7 +5,7 @@ import type { Coordinates } from "../types/store";
 
 export const MAP_KEY = "/map";
 export const INITIAL_CENTER: Coordinates = [36.773756, 126.933502];
-export const INITIAL_ZOOM = 17;
+export const INITIAL_ZOOM = 16;
 
 const useMap = () => {
   const initializeMap = useCallback((map: NaverMap) => {
