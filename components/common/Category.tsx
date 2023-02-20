@@ -20,6 +20,9 @@ export default function Category() {
         <li>
           <a>포차</a>
         </li>
+        <li>
+          <a>디저트</a>
+        </li>
       </ul>
     </div>
   );

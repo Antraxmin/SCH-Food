@@ -21,13 +21,13 @@ const Home: NextPage<Props> = ({ stores }) => {
 
   return (
     <Fragment>
-      <Header />
-      <Category />
-      <main className="flex-1 mt-28 h-screen">
-        <div className="w-full h-2/6">
+      <main className="flex-1 pt-[340px] h-screen pt-[1px] overflow-auto">
+        <div className="w-full">
+          <Header />
+          <Category />
           <MapSection />
         </div>
-        <div className="w-full h-4/6">
+        <div>
           <CardSection />
         </div>
       </main>
