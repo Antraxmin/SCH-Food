@@ -7,6 +7,9 @@ export default function CardSection() {
       <Item />
       <Item />
       <Item />
+      <Item />
+      <Item />
+      <Item />
     </div>
   );
 }

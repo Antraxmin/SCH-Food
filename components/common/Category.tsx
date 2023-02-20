@@ -21,7 +21,7 @@ export default function Category() {
           <a>포차</a>
         </li>
         <li>
-          <a>디저트</a>
+          <a>카페</a>
         </li>
       </ul>
     </div>
