@@ -1,5 +1,4 @@
 import CardSection from "@/components/card/CardSection";
-import Card from "@/components/common/Card";
 import Category from "@/components/common/Category";
 import Header from "@/components/common/Header";
 import MapSection from "@/components/map/MapSection";
@@ -20,4 +19,11 @@ export default function Home() {
       </main>
     </Fragment>
   );
+}
+
+export async function getStaticProps() {
+  const stores = (await import('../public/data.json')).default;
+  return {
+    props: { stores}
+  }
 }

@@ -5,7 +5,7 @@ export type Coordinates = [latitude, longitude];
 
 export type Menu = { name: string; price: string };
 export type Store = {
-  id: number;
+  nid: number;
   name: string;
   description: string;
   kind: string;
