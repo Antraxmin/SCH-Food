@@ -4,7 +4,7 @@ import Map from "./Map";
 const MapSection = () => {
   const { initializeMap } = useMap();
   const onLoadMap = (map: NaverMap) => {
-    initializeMap(map);
+    initializeMap(map); // 지도가 load될때 실행 - 지도 객체를 전역상태로 저장
   };
 
   return <Map onLoad={onLoadMap} />;

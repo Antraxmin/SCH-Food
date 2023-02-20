@@ -12,6 +12,7 @@ interface Props {
 }
 
 const Home: NextPage<Props> = ({ stores }) => {
+  //console.log(stores);
   const { initializeStores } = useStore();
 
   useEffect(() => {
