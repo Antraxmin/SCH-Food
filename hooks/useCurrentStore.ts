@@ -21,3 +21,5 @@ const useCurrentStore = () => {
     clearCurrentStore,
   };
 };
+
+export default useCurrentStore;

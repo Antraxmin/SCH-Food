@@ -4,10 +4,14 @@ import { NaverMap } from "@/types/map";
 import { Store } from "../../types/store";
 import Marker from "./Marker";
 import useSWR from "swr";
+import useCurrentStore, { CURRENT_STORE_KEY } from "@/hooks/useCurrentStore";
 
 const Markers = () => {
   const { data: map } = useSWR<NaverMap>(MAP_KEY);
   const { data: stores } = useSWR<Store[]>(STORE_KEY);
+
+  const { data: currentStore } = useSWR<Store>(CURRENT_STORE_KEY);
+  const { setCurrentStore, clearCurrentStore } = useCurrentStore();
 
   if (!map || !stores) return null;
   return (
@@ -25,6 +29,9 @@ const Markers = () => {
               size: new naver.maps.Size(38, 58),
               anchor: new naver.maps.Point(19, 58),
             }}*/
+            onClick={() => {
+              setCurrentStore(store); // 클릭한 식당의 전역 상태 update
+            }}
           />
         );
       })}
