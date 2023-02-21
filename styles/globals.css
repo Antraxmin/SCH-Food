@@ -7,7 +7,6 @@ body {
   background-color: hsl(0, 0%, 93%);
   max-width: 448px;
   margin: auto;
-  height: 100%;
 }
 
 @font-face {

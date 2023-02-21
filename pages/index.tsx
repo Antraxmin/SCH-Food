@@ -22,7 +22,7 @@ const Home: NextPage<Props> = ({ stores }) => {
   return (
     <Fragment>
       <main className="flex-1 pt-[340px] h-screen pt-[1px] overflow-auto">
-        <div className="w-full">
+        <div className="w-full ">
           <Header />
           <Category />
           <MapSection />

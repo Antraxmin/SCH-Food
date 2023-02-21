@@ -1,15 +1,15 @@
 export default function Category() {
   return (
-    <div className="w-full flex justify-center bg-white mt-12 fixed top-4 z-30 max-w-md">
+    <div className="w-full justify-center bg-white mt-12 fixed top-4 z-30 max-w-md overflow-auto">
       <ul className="menu menu-horizontal bg-base-100">
         <li>
           <a>한식</a>
         </li>
         <li>
-          <a>일식</a>
+          <a>일식/돈가스</a>
         </li>
         <li>
-          <a>중식</a>
+          <a>중화요리</a>
         </li>
         <li>
           <a>분식</a>
@@ -18,7 +18,13 @@ export default function Category() {
           <a>양식</a>
         </li>
         <li>
-          <a>디저트</a>
+          <a>고기/구이</a>
+        </li>
+        <li>
+          <a>포차/주점</a>
+        </li>
+        <li>
+          <a>카페/디저트</a>
         </li>
       </ul>
     </div>
