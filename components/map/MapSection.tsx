@@ -10,10 +10,12 @@ const MapSection = () => {
   };
 
   return (
-    <div className="fixed z-1 w-full top-28 max-w-md h-[228px] m-auto rounded">
-      <Map onLoad={onLoadMap} />
-      <Markers />
-    </div>
+    <>
+      <div className="fixed z-1 w-full top-28 max-w-md h-52 m-auto rounded">
+        <Map onLoad={onLoadMap} />
+        <Markers />
+      </div>
+    </>
   );
 };
 
