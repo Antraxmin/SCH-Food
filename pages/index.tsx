@@ -1,4 +1,4 @@
-import ListSection from "@/components/card/ListSection";
+import ListSection from "@/components/List/ListSection";
 import Category from "@/components/common/Category";
 import Header from "@/components/common/Header";
 import MapSection from "@/components/map/MapSection";
