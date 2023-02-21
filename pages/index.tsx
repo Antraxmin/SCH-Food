@@ -1,4 +1,4 @@
-import CardSection from "@/components/card/CardSection";
+import ListSection from "@/components/card/ListSection";
 import Category from "@/components/common/Category";
 import Header from "@/components/common/Header";
 import MapSection from "@/components/map/MapSection";
@@ -21,16 +21,15 @@ const Home: NextPage<Props> = ({ stores }) => {
 
   return (
     <Fragment>
-      <main className="flex-1 pt-[340px] h-screen pt-[1px] overflow-auto">
-        <div className="w-full ">
-          <Header />
-          <Category />
-          <MapSection />
-        </div>
-        <div>
-          <CardSection />
-        </div>
-      </main>
+      <div className="w-full ">
+        <Header />
+        <Category />
+        <MapSection />
+        <div className="top-[320px] h-2 z-32 fixed bg-gray-200 w-[448px]" />
+        <main className="flex-1 pt-28 top-80 h-screen pt-[1px] overflow-auto  ">
+          <ListSection />
+        </main>
+      </div>
     </Fragment>
   );
 };
