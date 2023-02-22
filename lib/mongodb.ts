@@ -8,7 +8,7 @@ const uri: string = process.env.MONGODB_URI;
 let client: MongoClient;
 let clientPromise: Promise<MongoClient>;
 
-if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV === "production") {
   let globalWithMongoClientPromise = global as typeof globalThis & {
     _mongoClientPromise: Promise<MongoClient>;
   };
