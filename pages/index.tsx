@@ -3,9 +3,14 @@ import Category from "@/components/common/Category";
 import Header from "@/components/common/Header";
 import MapSection from "@/components/map/MapSection";
 import useStore from "@/hooks/useStore";
-import { Store } from "@/types/store";
-import { NextPage } from "next";
+import { Kind, Store } from "@/types/store";
+import { NextApiRequest, NextApiResponse, NextPage } from "next";
 import { Fragment, useEffect } from "react";
+import useSWR from "swr";
+import { useRouter } from "next/router";
+import useCurrentKind, { CURRENT_KIND_KEY } from "@/hooks/useCategory";
+import clientPromise from "@/lib/mongodb";
+import { Document, WithId } from "mongodb";
 
 interface Props {
   stores: Store[];
@@ -35,7 +40,7 @@ const Home: NextPage<Props> = ({ stores }) => {
 };
 
 export default Home;
-
+/*
 export async function getStaticProps() {
   const stores = await (
     await import(`${process.env.NEXT_PUBLIC_DB_URL}`)
@@ -44,4 +49,18 @@ export async function getStaticProps() {
   return {
     props: { stores },
   };
+}*/
+
+export async function getServerSideProps() {
+  try {
+    const client = await clientPromise;
+    const db = client.db(`${process.env.DB_NAME}`);
+
+    const stores = await db.collection("store").find({}).toArray();
+    return {
+      props: { stores: JSON.parse(JSON.stringify(stores)) },
+    };
+  } catch (e) {
+    console.error(e);
+  }
 }
