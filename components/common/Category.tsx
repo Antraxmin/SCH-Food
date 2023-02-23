@@ -2,7 +2,6 @@ import useSWR from "swr";
 import { useRouter } from "next/router";
 import useCurrentCategory, { CURRENT_CATEGORY_KEY } from "@/hooks/useCategory";
 import Link from "next/link";
-import { getServerSideProps } from "@/pages/category/[id]";
 
 export default function Category() {
   const { data: currentCategory } = useSWR<string>(CURRENT_CATEGORY_KEY);

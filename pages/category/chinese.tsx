@@ -12,7 +12,7 @@ interface Props {
   stores: Store[];
 }
 
-const getCategory: NextPage<Props> = ({ stores }) => {
+const Chinese: NextPage<Props> = ({ stores }) => {
   const { initializeStores } = useStore();
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const getCategory: NextPage<Props> = ({ stores }) => {
   );
 };
 
-export default getCategory;
+export default Chinese;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   try {
