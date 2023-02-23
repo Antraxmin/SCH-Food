@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Store } from "../../types/store";
+import DetailHeader from "./DetailHeader";
 
 type Props = {
   currentStore?: Store;
@@ -10,6 +11,7 @@ const DetailPage = ({ currentStore, expanded }: Props) => {
   if (!currentStore) return null;
   return (
     <div className="bg-white">
+      <DetailHeader currentStore={currentStore} />
       <div className="">
         {currentStore.images.slice(0, 3).map((image) => (
           <div
