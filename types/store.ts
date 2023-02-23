@@ -18,3 +18,8 @@ export type Store = {
   menus: Menu[];
   onClick?: () => void;
 };
+
+export type Kind = {
+  name: string;
+  onClick?: () => void;
+};
