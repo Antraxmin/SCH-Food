@@ -25,6 +25,10 @@ const ListSection = () => {
             images={store.images}
             address={store.address}
             menus={store.menus}
+            onClick={() => {
+              setCurrentStore(store); // 클릭한 식당을 currentStore로 지정
+              console.log(store.name);
+            }}
           />
         );
       })}

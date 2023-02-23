@@ -1,8 +1,9 @@
 import { Store } from "@/types/store";
+import { addListener } from "process";
 
-const ListItem = ({ name, description, address, kind }: Store) => {
+const ListItem = ({ name, description, address, kind, onClick }: Store) => {
   return (
-    <div>
+    <div onClick={onClick}>
       <li className=" py-3 mx-2 flex justify-between items-center bg-white mt-2 p-2 hover:shadow-lg rounded cursor-pointer transition h-24 pr-4">
         <div className="flex ml-1 w-4/5 h-full">
           <img

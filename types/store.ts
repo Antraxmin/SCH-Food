@@ -14,4 +14,5 @@ export type Store = {
   images: string[];
   address: string;
   menus: Menu[];
+  onClick?: () => void;
 };
