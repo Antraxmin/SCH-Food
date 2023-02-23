@@ -5,14 +5,15 @@ import useSWR from "swr";
 import useCurrentStore, { CURRENT_STORE_KEY } from "@/hooks/useCurrentStore";
 import DetailPage from "../detail/DetailPage";
 import { useState } from "react";
-import { Router } from "next/router";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 const ListSection = () => {
   const { data: stores } = useSWR<Store[]>(STORE_KEY);
   const { data: currentStore } = useSWR<Store>(CURRENT_STORE_KEY);
   const { setCurrentStore, clearCurrentStore } = useCurrentStore();
   const [expanded, setExpanded] = useState(false);
+
+  const router = useRouter();
 
   if (!stores) return null;
   return (
@@ -33,9 +34,8 @@ const ListSection = () => {
             menus={store.menus}
             onClick={() => {
               setCurrentStore(store); // 클릭한 식당을 currentStore로 지정
-              console.log(store.name);
               <DetailPage currentStore={currentStore} expanded={expanded} />;
-              <Link href={`/[${store.name}]`} />;
+              router.push(`/${store.name}`);
             }}
           />
         );

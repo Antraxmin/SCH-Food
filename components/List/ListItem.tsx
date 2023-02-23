@@ -1,6 +1,4 @@
 import { Store } from "@/types/store";
-import { addListener } from "process";
-import Image from "next/image";
 
 const ListItem = ({
   name,
