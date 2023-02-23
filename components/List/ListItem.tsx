@@ -13,10 +13,10 @@ const ListItem = ({ name, description, address, kind }: Store) => {
           />
           <div className="flex flex-col ml-4 w-full">
             <span className="font-medium text-black">{name}</span>
-            <span className="text-sm text-gray-400 truncate w-32">
+            <span className="text-sm text-gray-400 truncate w-60">
               {description}
             </span>
-            <span className="text-sm text-gray-400 truncate w-32 mt-1">
+            <span className="text-sm text-gray-400 truncate w-60 mt-1">
               {address}
             </span>
           </div>
