@@ -27,6 +27,7 @@ const ListSection = () => {
             description={store.description}
             topimg={store.topimg}
             kind={store.kind}
+            hour={store.hour}
             coordinates={store.coordinates}
             phone={store.phone}
             images={store.images}

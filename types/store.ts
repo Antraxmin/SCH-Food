@@ -10,6 +10,7 @@ export type Store = {
   description: string;
   topimg: string;
   kind: string;
+  hour: string;
   coordinates: Coordinates;
   phone: string;
   images: string[];
