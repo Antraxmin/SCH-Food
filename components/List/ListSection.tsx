@@ -2,9 +2,12 @@ import { STORE_KEY } from "@/hooks/useStore";
 import { Store } from "@/types/store";
 import ListItem from "./ListItem";
 import useSWR from "swr";
+import useCurrentStore, { CURRENT_STORE_KEY } from "@/hooks/useCurrentStore";
 
 const ListSection = () => {
   const { data: stores } = useSWR<Store[]>(STORE_KEY);
+  const { data: currentStore } = useSWR<Store[]>(CURRENT_STORE_KEY);
+  const { setCurrentStore, clearCurrentStore } = useCurrentStore();
 
   if (!stores) return null;
   return (
