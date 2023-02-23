@@ -11,7 +11,6 @@ const ListSection = () => {
   const { data: stores } = useSWR<Store[]>(STORE_KEY);
   const { data: currentStore } = useSWR<Store>(CURRENT_STORE_KEY);
   const { setCurrentStore, clearCurrentStore } = useCurrentStore();
-  const [expanded, setExpanded] = useState(false);
 
   const router = useRouter();
 
@@ -35,7 +34,7 @@ const ListSection = () => {
             menus={store.menus}
             onClick={() => {
               setCurrentStore(store); // 클릭한 식당을 currentStore로 지정
-              <DetailPage currentStore={currentStore} expanded={expanded} />;
+              //<DetailPage currentStore={currentStore} expanded={expanded} />;
               router.push(`/${store.name}`);
             }}
           />
