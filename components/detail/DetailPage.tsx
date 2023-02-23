@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Store } from "../../types/store";
 import DetailCarousel from "./DetailCarousel";
 import DetailHeader from "./DetailHeader";
+import DetailInfo from "./DetailInfo";
 
 type Props = {
   currentStore?: Store;
@@ -18,19 +19,8 @@ const DetailPage = ({ currentStore, expanded }: Props) => {
       </div>
       {expanded && (
         <>
-          <div>
-            <h2 className="text-center">{currentStore.name}</h2>
-          </div>
-          <hr />
-          <div className="text-center">
-            <h2>기본 정보</h2>
-            <div className="address">
-              <span>{currentStore.address || "정보가 없습니다."}</span>
-            </div>
-            <div className="phone">
-              <span>{currentStore.phone || "정보가 없습니다."}</span>
-            </div>
-          </div>
+          <DetailInfo currentStore={currentStore} />
+          <br />
           <hr />
           <div className="">
             <h2 className="text-center mb-4">MENU</h2>
@@ -38,7 +28,7 @@ const DetailPage = ({ currentStore, expanded }: Props) => {
               {currentStore.menus?.map((menu) => (
                 <li
                   key={menu.name}
-                  className="flex justify-between mx-4 mt-1 text-sm"
+                  className="flex justify-between mx-6 mt-1 text-sm"
                 >
                   <span>{menu.name}</span>
                   <span>{menu.price}</span>

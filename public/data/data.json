@@ -5,6 +5,7 @@
     "topimg": "https://ldb-phinf.pstatic.net/20220622_254/1655860890983CkAMy_JPEG/%B9%E8%B9%CE%BD%E6%B3%D7%C0%CF1.jpeg",
     "description": "아산 순천향대 후문 먹자골목에 위치해 있습니다.",
     "kind": "일식",
+    "hour": "11:00 ~ 20:30, 매주 일요일 정기휴무",
     "coordinates": [36.775163, 126.933966],
     "phone": "041-532-1550",
     "images": [
@@ -12,7 +13,7 @@
       "https://ldb-phinf.pstatic.net/20220622_89/1655860890977JVaU0_JPEG/%B9%E8%B9%CE%BD%E6%B3%D7%C0%CF2.jpeg",
       "https://ldb-phinf.pstatic.net/20220622_254/1655860890983CkAMy_JPEG/%B9%E8%B9%CE%BD%E6%B3%D7%C0%CF1.jpeg"
     ],
-    "address": "충남 아산시 신창면 순천향로15번길 18-1 1층 최고당돈가스 순천향대점",
+    "address": "충남 아산시 신창면 순천향로15번길 18-1 1층",
     "menus": [
       { "name": "수제생등심돈가스", "price": "6,900원" },
       { "name": "치즈돈가스", "price": "8,900원" },
@@ -23,8 +24,9 @@
     "nid": 17229358,
     "name": "궁중화로",
     "topimg": "https://ldb-phinf.pstatic.net/20220412_222/1649766676486KH6xv_JPEG/downloadfile-18.jpg",
-    "description": "한식 전통의 음식을 차별화된 메뉴로 제공",
+    "description": "#육회비빔밥 #육회냉면 #한우생등심",
     "kind": "한식",
+    "hour": "10:00 ~ 22:00, 정기휴무일 없음",
     "coordinates": ["36.77511", "126.933727"],
     "phone": "0507-1330-8592",
     "images": [
@@ -43,8 +45,9 @@
     "nid": 1060849961,
     "name": "은화수식당",
     "topimg": "https://ldb-phinf.pstatic.net/20221117_289/1668666958563GQyqU_JPEG/KakaoTalk_20220930_124553582.jpg",
-    "description": "순천향대 신창 맛집",
+    "description": "#멘치카츠카레 #경양식돈가스 #치즈돈가스",
     "kind": "일식",
+    "hour": "11:00 ~ 21:00, 정기휴무일 없음",
     "coordinates": [36.774072, 126.932891],
     "phone": "041-531-5211",
     "images": [
@@ -52,7 +55,7 @@
       "https://ldb-phinf.pstatic.net/20221117_279/1668666958302slWHT_JPEG/KakaoTalk_20220930_125421420.jpg",
       "https://ldb-phinf.pstatic.net/20221117_143/1668666958264sOkuL_JPEG/KakaoTalk_20220930_125202907.jpg"
     ],
-    "address": "충남 아산시 신창면 순천향로 8 1층 2칸 은화수식당 순천향대점",
+    "address": "충남 아산시 신창면 순천향로 8 1층",
     "menus": [
       { "name": "멘치카츠카레", "price": "9,000원" },
       { "name": "고구마매콤이돈가스", "price": "10,500원" },
@@ -68,8 +71,9 @@
     "nid": 1552938968,
     "name": "계경",
     "topimg": "https://pup-review-phinf.pstatic.net/MjAyMjExMTFfMjIg/MDAxNjY4MTQxODI2NTc3.ZtSkhWI84izWYSipTWSAIwv206kg3h_GePLOumwzyBIg.-4QohT6rgNcmKQCi-KwvT-IYsTyUyNwmJ7a8Qpgx7Xgg.JPEG/20221111_125815.jpg",
-    "description": "신창의 첫 콩불집",
+    "description": "#콩불 #치즈콩불 #소고기칼국수",
     "kind": "한식",
+    "hour": "방학 기준 10:30 ~ 15:00, 주말 정기휴무",
     "coordinates": [36.775699, 126.933736],
     "phone": "041-541-1444",
     "images": [
@@ -94,6 +98,7 @@
     "topimg": "https://ldb-phinf.pstatic.net/20210114_77/1610621671151xmJ31_JPEG/mXROJzz-VtGXJiEphANBMGvy.jpg",
     "description": "순천향대 신창 맛집",
     "kind": "일식",
+    "hour": "11:30 ~ 20:30, 토요일 휴무",
     "coordinates": [36.775248, 126.934002],
     "phone": "050-3750-8589",
     "images": [
@@ -114,7 +119,7 @@
   {
     "nid": 17229126,
     "name": "밀터칼국수",
-    "description": "4구역 신창 119 안전센터 맞은편",
+    "description": "#해물칼국수 #면추가 셀프바",
     "topimg": "https://pup-review-phinf.pstatic.net/MjAyMjEyMTVfMTQz/MDAxNjcxMDk0OTAwMDkx.dUAsxdHYbxPTn07wG_ojdtXNMNnrZiAKa2K3rC9OVZ0g.fsZrMKU6LL_Jizbe0a9TQ_50vOjIVv6Bbyt2Ha6t1Jog.JPEG/1000002377.jpg",
     "kind": "한식",
     "hour": "10:30 ~ 20:00, 금요일 정기휴무",
@@ -137,7 +142,7 @@
   {
     "nid": 1904967959,
     "name": "순천향대학교국밥",
-    "description": "4구역 베이커리경 맞은편",
+    "description": "#수육국밥 #순대국밥",
     "topimg": "https://pup-review-phinf.pstatic.net/MjAyMjExMjdfMjkz/MDAxNjY5NTUxMjExMDg0.vD9a7Yi3sxdT3o66rpzu9c2d7WBQyvDvqb1lV9sSIKcg.Lp64LGVU_qTEjFP-gr6GeYbbPjl1mNirupeKESwPr7og.JPEG/20221120_170708.jpg",
     "kind": "한식",
     "hour": "11:00 ~ 08:00, 토요일 정기휴무",
@@ -208,7 +213,7 @@
   {
     "nid": 1609320041,
     "name": "천원국수",
-    "description": "#천원 멸치국수",
+    "description": "#천원 멸치국수 #제육컵밥 #떡튀순",
     "topimg": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAxMTNfMTY0%2FMDAxNjczNTk5NDI3MTE1.P8YK26GQ6MmnmWxSsFSgQ6lpm0S9cwQhA1V0-yKC3ywg.a8IUTnFFs9RX2r5HuGH3Owp-a8zuYe0nC2TCvp1CPPkg.PNG.sagesirius%2F%25C3%25B5%25BF%25F8%25B1%25B9%25BC%25F6.png",
     "kind": "분식",
     "hour": "-",
@@ -247,7 +252,7 @@
       "https://myplace-phinf.pstatic.net/20210706_96/1625582536908tgFhl_JPEG/upload_09863d6935b6e89baf6a79c4e7c5c357.jpg",
       "https://myplace-phinf.pstatic.net/20210706_244/1625582537286pHuIz_JPEG/upload_1e8c97854c538717dec2ab221b7e0dda.jpg"
     ],
-    "address": "충남 아산시 신창면 순천향로 25 행복한돈가스",
+    "address": "충남 아산시 신창면 순천향로 25",
     "menus": [
       { "name": "생등심가스", "price": "8,500원" },
       { "name": "고구마치즈돈가스", "price": "9,500원" },
@@ -339,7 +344,7 @@
       "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEwMjRfMjI1%2FMDAxNjY2NTg4OTU1NDM2.B4qpnWmeQvBuy5I5Da6-Lx_LrTYVYExKxm8WY7kjeLsg.UdDEpmt7-h0Vi2Oc8xHWpdsvANnjLCMo9wLLusRP80cg.JPEG.wnsgml4627%2Foutput_640493637.jpg",
       "https://ldb-phinf.pstatic.net//20170711_245/1499753339572IfTUV_JPEG/20170630_112419.jpg"
     ],
-    "address": "충남 아산시 신창면 순천향로 12-2 1층 밀플랜비",
+    "address": "충남 아산시 신창면 순천향로 12-2 1층",
     "menus": [
       { "name": "치킨감자부리또", "price": "5,000원" },
       { "name": "치킨라이스부리또", "price": "4,500원" },
@@ -360,7 +365,7 @@
     "nid": 938204701,
     "name": "배부장찌개",
     "topimg": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEwMDRfMTky%2FMDAxNjY0ODcwOTM4NTg0.iAdzQKVtYwdUtwOIjRVeefqRIptCs9B3DK9ZFvM-Cwwg.jbCzJQ2DFKP0YK-0Ak6FZnS2PME2iHfN-_maD-obGrAg.JPEG.yjhyjh4747%2F20220825_121653.jpg",
-    "description": "#치킨감자부리또 #소고기부리또 #감튀맛집",
+    "description": "#돼지짜글이 #국물닭볶음탕 #돼지김치찌개",
     "kind": "양식",
     "hour": "11:00 ~ 24:00, 정기휴무일 없음",
     "coordinates": [36.774164, 126.933551],
@@ -391,7 +396,7 @@
     "nid": 1455333487,
     "name": "마라탕신창19호점",
     "topimg": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAzMjFfNjQg%2FMDAxNjQ3ODY4ODc3Mzk1.JqqiI8PkyNNFSy1UDVjDRDfl1dY1V_sgJ1MQxApXCEcg.U5jF17dfrdefmn42TizU2ZGLtaSyXRdlqanQXT1oWoYg.JPEG.turnaround1019%2F1647868876059.jpg",
-    "description": "#마라탕 #소고기부리또 #감튀맛집",
+    "description": "#마라탕 #마라향궈",
     "kind": "양식",
     "hour": "-",
     "coordinates": [36.7778197, 126.9345901],
@@ -420,7 +425,7 @@
     "nid": 1144155541,
     "name": "장미막창",
     "topimg": "https://pup-review-phinf.pstatic.net/MjAyMjA4MDdfMjY2/MDAxNjU5ODQ3OTMzNDQ1.YmHXukXlI41Cveh65RdGp1xuj-8HZbpbi5pwyxwpDgEg.sRP1plXjao957sYZmbiPnWebsok9e2q0Jf-KVdLE3VYg.JPEG/upload_820803aa685be828074d844e3d975bb9.jpeg",
-    "description": "#마라탕 #소고기부리또 #감튀맛집",
+    "description": "#돼지막창 #소곱창 #껍데기",
     "kind": "고기",
     "hour": "-",
     "coordinates": [36.773553, 126.93377],
@@ -507,7 +512,7 @@
     "nid": 1959195537,
     "name": "중국집",
     "topimg": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDEwMDVfMjA3%2FMDAxNjAxODg1NzA5MTA2.9qR6dbFI1vs5aPVg4KCZ_H-sN6s33_g8u7XqLwmvL_Qg.ZjcQWloD3r-SrzsjdeWGdCjxpxIGrFRdJq9RphqYwgQg.JPEG.yuki_junko%2F%25BE%25C6%25BB%25EA_%25BD%25C5%25C3%25A2_%25BC%25F8%25C3%25B5%25C7%25E2%25B4%25EB_%25B8%25C0%25C1%25FD_%25C0%25CC%25B8%25A7%25C0%25CC_%25C1%25DF%25B1%25B9%25C1%25FD_%25C2%25AB%25BB%25CD%25B8%25D4%25B0%25ED_%25BF%25D4%25BE%25EE%25BF%25E4_%25285%2529.jpg",
-    "description": "#돼김 #제육 #학생가격 6,000원",
+    "description": "#짜장짬뽕 #중화요리",
     "kind": "중식",
     "hour": "10:30 ~ 20:00, 매주 일요일 정기휴무",
     "coordinates": [36.7740812, 126.9335347],
@@ -681,7 +686,7 @@
     "nid": 1563650553,
     "name": "썬오브비앤피",
     "topimg": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA3MDNfMzgg%2FMDAxNTMwNjE1MzUyMTgx.6G1VyEBnNb-WJXqKLqCQirZq32PwIiUxASYHTvtwXfog.EnDVaHC6wfxdDbUyKi095248ZeAKHhKZVuurohzfzCgg.JPEG.alswl9110%2FIMG_7788.jpg",
-    "description": "#피자치킨",
+    "description": "#피자치킨파스타",
     "kind": "양식",
     "hour": "10:00-02:00, 정기휴무일 없음",
     "coordinates": [36.773969, 126.932882],
