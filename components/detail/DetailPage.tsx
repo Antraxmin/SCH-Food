@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Store } from "../../types/store";
+import DetailCarousel from "./DetailCarousel";
 import DetailHeader from "./DetailHeader";
 
 type Props = {
@@ -12,25 +13,8 @@ const DetailPage = ({ currentStore, expanded }: Props) => {
   return (
     <div className="bg-white">
       <DetailHeader currentStore={currentStore} />
-      <div className="">
-        {currentStore.images.slice(0, 3).map((image) => (
-          <div
-            style={{ position: "relative", maxWidth: 120, height: 80 }}
-            key={image}
-          >
-            <Image
-              className="grid-3"
-              src={image}
-              alt=""
-              fill
-              style={{ objectFit: "cover" }}
-              sizes="120px"
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO0WhFsDwADzwF2mLYSJgAAAABJRU5ErkJggg=="
-              priority
-            />
-          </div>
-        ))}
+      <div className="h-60">
+        <DetailCarousel currentStore={currentStore} />
       </div>
       {expanded && (
         <>
