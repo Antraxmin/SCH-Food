@@ -5,6 +5,8 @@ import useSWR from "swr";
 import useCurrentStore, { CURRENT_STORE_KEY } from "@/hooks/useCurrentStore";
 import DetailPage from "../detail/DetailPage";
 import { useState } from "react";
+import { Router } from "next/router";
+import Link from "next/link";
 
 const ListSection = () => {
   const { data: stores } = useSWR<Store[]>(STORE_KEY);
@@ -14,7 +16,7 @@ const ListSection = () => {
 
   if (!stores) return null;
   return (
-    <div className=" bg-gray-200 mt-80 z-2">
+    <div className=" bg-gray-200 mt-[326px] z-2">
       {stores.map((store) => {
         return (
           <ListItem
@@ -22,6 +24,7 @@ const ListSection = () => {
             key={store.nid}
             nid={store.nid}
             description={store.description}
+            topimg={store.topimg}
             kind={store.kind}
             coordinates={store.coordinates}
             phone={store.phone}
@@ -32,6 +35,7 @@ const ListSection = () => {
               setCurrentStore(store); // 클릭한 식당을 currentStore로 지정
               console.log(store.name);
               <DetailPage currentStore={currentStore} expanded={expanded} />;
+              <Link href={`/[${store.name}]`} />;
             }}
           />
         );

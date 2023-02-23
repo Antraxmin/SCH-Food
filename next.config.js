@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["search.pstatic.net"],
+    domains: [
+      "ldb-phinf.pstatic.net",
+      "search.pstatic.net",
+      "myplace-phinf.pstatic.net",
+      "pup-review-phinf.pstatic.net",
+    ],
   },
 };
 
-module.exports = {
-  staticPageGenerationTimeout: 1000,
-};
+module.exports = nextConfig;

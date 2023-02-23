@@ -8,6 +8,7 @@ export type Store = {
   nid: number;
   name: string;
   description: string;
+  topimg: string;
   kind: string;
   coordinates: Coordinates;
   phone: string;
