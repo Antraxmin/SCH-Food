@@ -1,19 +1,18 @@
-import ListSection from "@/components/List/ListSection";
 import Category from "@/components/common/Category";
 import Header from "@/components/common/Header";
+import ListSection from "@/components/List/ListSection";
 import MapSection from "@/components/map/MapSection";
 import useStore from "@/hooks/useStore";
-import { Store } from "@/types/store";
-import { NextPage } from "next";
-import { Fragment, useEffect } from "react";
 import clientPromise from "@/lib/mongodb";
+import { Store } from "@/types/store";
+import { GetServerSidePropsContext, NextPage } from "next";
+import { Fragment, useEffect } from "react";
 
 interface Props {
   stores: Store[];
 }
 
-const Home: NextPage<Props> = ({ stores }) => {
-  //console.log(stores);
+const getCategory: NextPage<Props> = ({ stores }) => {
   const { initializeStores } = useStore();
 
   useEffect(() => {
@@ -35,24 +34,17 @@ const Home: NextPage<Props> = ({ stores }) => {
   );
 };
 
-export default Home;
-/*
-export async function getStaticProps() {
-  const stores = await (
-    await import(`${process.env.NEXT_PUBLIC_DB_URL}`)
-  ).default;
-
-  return {
-    props: { stores },
-  };
-}*/
+export default getCategory;
 
 export async function getServerSideProps() {
   try {
     const client = await clientPromise;
     const db = client.db(`${process.env.DB_NAME}`);
 
-    const stores = await db.collection("store").find({}).toArray();
+    const stores = await db
+      .collection("store")
+      .find({ kind: "한식" })
+      .toArray();
     return {
       props: { stores: JSON.parse(JSON.stringify(stores)) },
     };
