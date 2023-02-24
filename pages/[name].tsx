@@ -1,51 +1,80 @@
+import Category from "@/components/common/Category";
+import Header from "@/components/common/Header";
+import DetailCarousel from "@/components/detail/DetailCarousel";
+import DetailHeader from "@/components/detail/DetailHeader";
+import DetailInfo from "@/components/detail/DetailInfo";
 import DetailPage from "@/components/detail/DetailPage";
+import ListSection from "@/components/List/ListSection";
+import MapSection from "@/components/map/MapSection";
+import useClicked from "@/hooks/useClicked";
 import useCurrentStore from "@/hooks/useCurrentStore";
+import useStore from "@/hooks/useStore";
+import clientPromise from "@/lib/mongodb";
 import type { Store } from "@/types/store";
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import {
+  GetServerSidePropsContext,
+  GetStaticPaths,
+  GetStaticProps,
+  NextPage,
+} from "next";
 import { useRouter } from "next/router";
+import { Fragment, useEffect } from "react";
 
 interface Props {
-  store: Store;
+  store: Store[];
 }
 
 const StoreDetail: NextPage<Props> = ({ store }) => {
-  const expanded = true;
-  const router = useRouter();
-  const { setCurrentStore } = useCurrentStore();
-  const goToDetail = () => {
-    setCurrentStore(store);
-    router.push(`/${store.name}`);
-  };
+  const { initializeClicked } = useClicked();
+
+  useEffect(() => {
+    initializeClicked(store);
+  }, [initializeClicked, store]);
   return (
-    <>
-      <DetailPage currentStore={store} expanded={expanded} />
-    </>
+    <div className="bg-white">
+      <DetailHeader currentStore={store[0]} />
+      <div className="h-60">
+        <DetailCarousel currentStore={store[0]} />
+      </div>
+      <>
+        <DetailInfo currentStore={store[0]} />
+        <br />
+        <hr />
+        <div className="">
+          <h2 className="text-center mb-4">MENU</h2>
+          <ul>
+            {store[0].menus?.map((menu) => (
+              <li
+                key={menu.name}
+                className="flex justify-between mx-6 mt-1 text-sm"
+              >
+                <span>{menu.name}</span>
+                <span>{menu.price}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </>
+    </div>
   );
 };
 
 export default StoreDetail;
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const stores = (await import(`${process.env.NEXT_PUBLIC_DB_URL}`)).default;
-  const paths = stores.map((store: { name: any }) => ({
-    params: { name: store.name },
-  }));
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  if (!context.params) return null;
+  const names = context.params.name;
+  console.log(names);
+  try {
+    const client = await clientPromise;
+    const db = client.db(`${process.env.DB_NAME}`);
 
-  return { paths, fallback: false };
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const stores = (await import(`${process.env.NEXT_PUBLIC_DB_URL}`)).default;
-  const store = stores.find(
-    (store: { name: string | string[] | undefined }) =>
-      store.name === params?.name
-  );
-
-  if (!store) {
+    const stores = await db.collection("store").find({ name: names }).toArray();
+    console.log(JSON.parse(JSON.stringify(stores)));
     return {
-      notFound: true, // 404 error
+      props: { store: JSON.parse(JSON.stringify(stores)) },
     };
+  } catch (e) {
+    console.error(e);
   }
-
-  return { props: { store } };
-};
+}
