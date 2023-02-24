@@ -29,7 +29,7 @@ function Header() {
               <Link href={"/about"}>소개</Link>
             </li>
             <li>
-              <Link href={"/feedback"}>제보하기</Link>
+              <Link href={"https://open.kakao.com/o/sdwqir6e"}>제보하기</Link>
             </li>
           </ul>
         </div>
