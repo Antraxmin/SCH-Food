@@ -40,7 +40,7 @@ function Header() {
         </Link>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-ghost btn-circle">
+        <label htmlFor="my-modal-3" className="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -55,7 +55,22 @@ function Header() {
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
-        </button>
+        </label>
+        <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+        <div className="modal">
+          <div className="modal-box relative w-80 m-auto">
+            <label
+              htmlFor="my-modal-3"
+              className="btn btn-sm btn-circle absolute right-2 top-2"
+            >
+              ✕
+            </label>
+            <h3 className="text-lg font-bold">
+              검색 기능은 현재 개발중이에요!
+            </h3>
+            <p className="py-4">빠른 시일 내 제공하도록 노력하겠습니다 🔥</p>
+          </div>
+        </div>
       </div>
     </div>
   );
