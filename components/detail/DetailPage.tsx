@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Store } from "../../types/store";
 import DetailCarousel from "./DetailCarousel";
 import DetailHeader from "./DetailHeader";

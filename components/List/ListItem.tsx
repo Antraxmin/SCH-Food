@@ -1,6 +1,5 @@
 import { Store } from "@/types/store";
 import Link from "next/link";
-import router from "next/router";
 
 const ListItem = ({
   name,

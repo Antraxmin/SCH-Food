@@ -1,5 +1,4 @@
 import { Store } from "@/types/store";
-import Link from "next/link";
 
 type Props = {
   currentStore?: Store;

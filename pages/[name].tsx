@@ -1,24 +1,11 @@
-import Category from "@/components/common/Category";
-import Header from "@/components/common/Header";
 import DetailCarousel from "@/components/detail/DetailCarousel";
 import DetailHeader from "@/components/detail/DetailHeader";
 import DetailInfo from "@/components/detail/DetailInfo";
-import DetailPage from "@/components/detail/DetailPage";
-import ListSection from "@/components/List/ListSection";
-import MapSection from "@/components/map/MapSection";
 import useClicked from "@/hooks/useClicked";
-import useCurrentStore from "@/hooks/useCurrentStore";
-import useStore from "@/hooks/useStore";
 import clientPromise from "@/lib/mongodb";
 import type { Store } from "@/types/store";
-import {
-  GetServerSidePropsContext,
-  GetStaticPaths,
-  GetStaticProps,
-  NextPage,
-} from "next";
-import { useRouter } from "next/router";
-import { Fragment, useEffect } from "react";
+import { GetServerSidePropsContext, NextPage } from "next";
+import { useEffect } from "react";
 
 interface Props {
   store: Store[];
