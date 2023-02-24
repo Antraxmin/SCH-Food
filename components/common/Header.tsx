@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <div className="navbar bg-base-100 fixed top-0 z-50 max-w-md">
+    <div className="navbar bg-white fixed top-0 z-50 max-w-md shadow-sm">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">

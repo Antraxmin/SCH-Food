@@ -3,8 +3,6 @@ import { Store } from "@/types/store";
 import ListItem from "./ListItem";
 import useSWR from "swr";
 import useCurrentStore, { CURRENT_STORE_KEY } from "@/hooks/useCurrentStore";
-import DetailPage from "../detail/DetailPage";
-import { useState } from "react";
 import { useRouter } from "next/router";
 
 const ListSection = () => {
@@ -16,7 +14,7 @@ const ListSection = () => {
 
   if (!stores) return null;
   return (
-    <div className=" bg-gray-200 mt-[120px] z-2">
+    <div className=" bg-gray-200 mt-[110px] z-2 pt-2">
       {stores.map((store) => {
         return (
           <ListItem

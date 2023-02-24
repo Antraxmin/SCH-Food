@@ -2,6 +2,7 @@ import useSWR from "swr";
 import { useRouter } from "next/router";
 import useCurrentCategory, { CURRENT_CATEGORY_KEY } from "@/hooks/useCategory";
 import Link from "next/link";
+import "styles/layout.module.css";
 
 export default function Category() {
   const { data: currentCategory } = useSWR<string>(CURRENT_CATEGORY_KEY);
@@ -10,8 +11,8 @@ export default function Category() {
   const router = useRouter();
 
   return (
-    <div className="w-full justify-center bg-white mt-12 fixed top-4 z-30 max-w-md overflow-auto">
-      <ul className="menu menu-horizontal bg-base-100">
+    <div className="menubox w-full justify-center bg-white mt-12 fixed top-4 z-30 max-w-md overflow-auto">
+      <ul className="menu menu-horizontal bg-white">
         <li>
           <Link href={`/category/${"한식"}`}>한식</Link>
         </li>

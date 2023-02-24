@@ -12,30 +12,24 @@ const ListItem = ({
   return (
     <div>
       <Link href={`/${name}`}>
-        <li className=" py-3 mx-2 flex justify-between items-center bg-white mt-2 p-2 hover:shadow-lg rounded cursor-pointer transition h-24 pr-4">
-          <div className="flex ml-1 w-4/5 h-full">
-            <div className="w-32 rounded-md">
-              <img
-                className="w-full h-full rounded-md"
-                src={topimg}
-                alt={""}
-                width={50}
-                height={50}
-              />
-            </div>
-
-            <div className="flex flex-col ml-4 w-full">
-              <span className="font-medium text-black">{name}</span>
-              <span className="text-sm text-gray-400 truncate w-60">
-                {description}
-              </span>
-              <span className="text-sm text-gray-400 truncate w-60 mt-1">
-                {address}
-              </span>
-            </div>
+        <li className=" py-3 mx-2 flex justify-between items-center bg-white mt-1 mb-3 p-2 hover:bg-gray-100 rounded-xl cursor-pointer transition h-28 pr-4 shadow-md mx-3 shadow-gray-300 ">
+          <div className="img ml-2  h-full">
+            <img
+              className="w-28 h-full rounded-xl"
+              src={topimg}
+              alt={""}
+              width={50}
+              height={50}
+            />
+          </div>
+          <div className="title flex flex-col pl-4 ">
+            <span className="text-xl text-black">{name}</span>
+            <span className="text-sm text-gray-400 truncate w-60 mt-3">
+              {description}
+            </span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-gray-300">{kind}</span>
+            <span className="text-gray-400">{kind}</span>
             <i className="fa fa-star text-green-400"></i>
           </div>
         </li>

@@ -4,7 +4,7 @@
 
 body {
   font-family: -apple-system, Pretendard-Bold, sans-serif;
-  background-color: hsl(0, 0%, 93%);
+  background-color: rgb(229 231 235);
   max-width: 448px;
   margin: auto;
 }
