@@ -9,15 +9,15 @@ import { GetServerSidePropsContext, NextPage } from "next";
 import { Fragment, useEffect } from "react";
 
 interface Props {
-  stores: Store[];
+  store: Store[];
 }
 
-const American: NextPage<Props> = ({ stores }) => {
+const Filter: NextPage<Props> = ({ store }) => {
   const { initializeStores } = useStore();
 
   useEffect(() => {
-    initializeStores(stores);
-  }, [initializeStores, stores]);
+    initializeStores(store);
+  }, [initializeStores, store]);
 
   return (
     <Fragment>
@@ -34,19 +34,23 @@ const American: NextPage<Props> = ({ stores }) => {
   );
 };
 
-export default American;
+export default Filter;
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
+  if (!context.params) return null;
+  const category = context.params.id;
+  console.log(category);
   try {
     const client = await clientPromise;
     const db = client.db(`${process.env.DB_NAME}`);
 
     const stores = await db
       .collection("store")
-      .find({ kind: "양식" })
+      .find({ kind: category })
       .toArray();
+    console.log(JSON.parse(JSON.stringify(stores)));
     return {
-      props: { stores: JSON.parse(JSON.stringify(stores)) },
+      props: { store: JSON.parse(JSON.stringify(stores)) },
     };
   } catch (e) {
     console.error(e);

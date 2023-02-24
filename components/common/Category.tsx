@@ -13,28 +13,28 @@ export default function Category() {
     <div className="w-full justify-center bg-white mt-12 fixed top-4 z-30 max-w-md overflow-auto">
       <ul className="menu menu-horizontal bg-base-100">
         <li>
-          <Link href={{ pathname: "/category/korean" }}>한식</Link>
+          <Link href={`/category/${"한식"}`}>한식</Link>
         </li>
         <li>
-          <Link href={{ pathname: "/category/japanese" }}>일식/돈가스</Link>
+          <Link href={`/category/${"일식"}`}>일식/돈가스</Link>
         </li>
         <li>
-          <Link href={{ pathname: "/category/chinese" }}>중화요리</Link>
+          <Link href={`/category/${"중식"}`}>중화요리</Link>
         </li>
         <li>
-          <Link href={{ pathname: "/category/snackbar" }}>분식</Link>
+          <Link href={`/category/${"분식"}`}>분식</Link>
         </li>
         <li>
-          <Link href={{ pathname: "/category/american" }}>양식</Link>
+          <Link href={`/category/${"양식"}`}>양식</Link>
         </li>
         <li>
-          <Link href={{ pathname: "/category/grilled" }}>고기/구이</Link>
+          <Link href={`/category/${"고기"}`}>고기/구이</Link>
         </li>
         <li>
-          <Link href={{ pathname: "/category/pub" }}>포차/주점</Link>
+          <Link href={`/category/${"포차"}`}>포차/주점</Link>
         </li>
         <li>
-          <Link href={{ pathname: "/category/cafe" }}>카페/디저트</Link>
+          <Link href={`/category/${"카페"}`}>카페/디저트</Link>
         </li>
       </ul>
     </div>
