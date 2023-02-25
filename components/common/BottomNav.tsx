@@ -16,7 +16,7 @@ export default function BottomNav() {
         <button
           className=" hover:bg-gray-100"
           onClick={() => {
-            router.push(`/category/${"학식"}`);
+            router.push("/univ");
           }}
         >
           <span className="btm-nav-label">학 식</span>
