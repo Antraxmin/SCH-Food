@@ -30,17 +30,19 @@ const StoreDetail: NextPage<Props> = ({ store }) => {
         <hr />
         <div className="pb-10">
           <h2 className="text-center mb-4 text-lg">MENU</h2>
-          <ul>
-            {store[0].menus?.map((menu) => (
-              <li
-                key={menu.name}
-                className="flex justify-between mx-6 mt-1 text-sm"
-              >
-                <span>{menu.name}</span>
-                <span>{menu.price}</span>
-              </li>
-            ))}
-          </ul>
+          {store[0] === undefined ? null : (
+            <ul>
+              {store[0].menus?.map((menu) => (
+                <li
+                  key={menu.name}
+                  className="flex justify-between mx-6 mt-1 text-sm"
+                >
+                  <span>{menu.name}</span>
+                  <span>{menu.price}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </>
     </div>
