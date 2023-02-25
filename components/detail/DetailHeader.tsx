@@ -7,8 +7,8 @@ type Props = {
 };
 
 const DetailHeader = ({ currentStore }: Props) => {
-  if (!currentStore) return null;
   const router = useRouter();
+  if (!currentStore) return null;
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
