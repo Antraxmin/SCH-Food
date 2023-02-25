@@ -1,46 +1,27 @@
-import Link from "next/link";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 export default function BottomNav() {
   const router = useRouter();
   return (
     <div>
-      <div className="btm-nav max-w-md m-auto">
+      <div className="btm-nav max-w-md m-auto btm-nav-2xl h-14 shadow-md text-md">
         <button
-          className="active hover:bg-gray-100"
+          className="hover:bg-gray-100 text-md"
           onClick={() => {
             router.push("/");
           }}
         >
-          <img src="./svg/home.svg" />
-          <span className="btm-nav-label">후문</span>
+          <span className="btm-nav-label">후 문</span>
         </button>
         <button
           className=" hover:bg-gray-100"
           onClick={() => {
-            router.push(`/area/${"univ"}`);
+            router.push(`/category/${"학식"}`);
           }}
         >
-          <img src="./svg/univ.svg" />
-          <span className="btm-nav-label">학식</span>
-        </button>
-        <button className="hover:bg-gray-100">
-          <img src="./svg/park.svg" />
-          <span className="btm-nav-label">신정호</span>
+          <span className="btm-nav-label">학 식</span>
         </button>
       </div>
     </div>
   );
-}
-
-function change(e: { currentTarget: Element }) {
-  var btns = document.querySelectorAll(".btn_bt");
-  btns.forEach((btn, i) => {
-    if (e.currentTarget == btn) {
-      btn.classList.add("bg-gray-100");
-    } else {
-      btn.classList.remove("bg-gray-100");
-    }
-  });
-  console.log(e.currentTarget);
 }

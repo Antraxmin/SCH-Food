@@ -1,3 +1,4 @@
+import BottomNav from "@/components/common/BottomNav";
 import Category from "@/components/common/Category";
 import Header from "@/components/common/Header";
 import ListSection from "@/components/List/ListSection";
@@ -28,6 +29,7 @@ const Filter: NextPage<Props> = ({ store }) => {
         <main className="flex-1 pt-28 top-28 h-screen pt-[1px] overflow-auto  ">
           <ListSection />
         </main>
+        <BottomNav />
       </div>
     </Fragment>
   );

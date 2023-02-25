@@ -8,6 +8,7 @@ import { NextPage } from "next";
 import { Fragment, useEffect } from "react";
 import clientPromise from "@/lib/mongodb";
 import BottomNav from "@/components/common/BottomNav";
+import Head from "next/head";
 
 interface Props {
   stores: Store[];
@@ -23,6 +24,9 @@ const Home: NextPage<Props> = ({ stores }) => {
 
   return (
     <Fragment>
+      <Head>
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+      </Head>
       <div className="w-full ">
         <Header />
         <Category />
@@ -53,7 +57,10 @@ export async function getServerSideProps() {
     const client = await clientPromise;
     const db = client.db(`${process.env.DB_NAME}`);
 
-    const stores = await db.collection("store").find({}).toArray();
+    const stores = await db
+      .collection("store")
+      .find({ kind: "한식" })
+      .toArray();
     return {
       props: { stores: JSON.parse(JSON.stringify(stores)) },
     };

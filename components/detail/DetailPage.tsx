@@ -1,4 +1,5 @@
 import type { Store } from "../../types/store";
+import MapSection from "../map/MapSection";
 import DetailCarousel from "./DetailCarousel";
 import DetailHeader from "./DetailHeader";
 import DetailInfo from "./DetailInfo";
@@ -21,9 +22,9 @@ const DetailPage = ({ currentStore, expanded }: Props) => {
           <DetailInfo currentStore={currentStore} />
           <br />
           <hr />
-          <div className="">
-            <h2 className="text-center mb-4">MENU</h2>
-            <ul>
+          <div className="pb-10">
+            <h2 className="text-center text-lg ">메뉴</h2>
+            <ul className="mb-10">
               {currentStore.menus?.map((menu) => (
                 <li
                   key={menu.name}

@@ -1,6 +1,7 @@
 import DetailCarousel from "@/components/detail/DetailCarousel";
 import DetailHeader from "@/components/detail/DetailHeader";
 import DetailInfo from "@/components/detail/DetailInfo";
+import MapSection from "@/components/map/MapSection";
 import useClicked from "@/hooks/useClicked";
 import clientPromise from "@/lib/mongodb";
 import type { Store } from "@/types/store";
@@ -18,7 +19,7 @@ const StoreDetail: NextPage<Props> = ({ store }) => {
     initializeClicked(store);
   }, [initializeClicked, store]);
   return (
-    <div className="bg-white">
+    <div className="bg-gray-100">
       <DetailHeader currentStore={store[0]} />
       <div className="h-60">
         <DetailCarousel currentStore={store[0]} />
@@ -27,8 +28,8 @@ const StoreDetail: NextPage<Props> = ({ store }) => {
         <DetailInfo currentStore={store[0]} />
         <br />
         <hr />
-        <div className="">
-          <h2 className="text-center mb-4">MENU</h2>
+        <div className="pb-10">
+          <h2 className="text-center mb-4 text-lg">MENU</h2>
           <ul>
             {store[0].menus?.map((menu) => (
               <li

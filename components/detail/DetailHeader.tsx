@@ -1,5 +1,6 @@
 import { Store } from "@/types/store";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 type Props = {
   currentStore?: Store;
@@ -7,6 +8,7 @@ type Props = {
 
 const DetailHeader = ({ currentStore }: Props) => {
   if (!currentStore) return null;
+  const router = useRouter();
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -58,7 +60,12 @@ const DetailHeader = ({ currentStore }: Props) => {
                 이 식당의 정보가 변경되었다면 아래 버튼을 눌러 제보해주세요!
               </span>
               <div className="mt-2 card-actions ">
-                <button className="btn btn-primary btn-block w-full ">
+                <button
+                  className="btn btn-primary btn-block w-full "
+                  onClick={() => {
+                    router.push("https://open.kakao.com/o/sdwqir6e");
+                  }}
+                >
                   제보하기
                 </button>
               </div>
