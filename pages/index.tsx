@@ -1,14 +1,12 @@
 import ListSection from "@/components/List/ListSection";
 import Category from "@/components/common/Category";
 import Header from "@/components/common/Header";
-import MapSection from "@/components/map/MapSection";
 import useStore from "@/hooks/useStore";
 import { Store } from "@/types/store";
 import { NextPage } from "next";
 import { Fragment, useEffect } from "react";
 import clientPromise from "@/lib/mongodb";
 import BottomNav from "@/components/common/BottomNav";
-import Head from "next/head";
 
 interface Props {
   stores: Store[];
@@ -24,9 +22,6 @@ const Home: NextPage<Props> = ({ stores }) => {
 
   return (
     <Fragment>
-      <Head>
-        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-      </Head>
       <div className="w-full ">
         <Header />
         <Category />
@@ -41,16 +36,6 @@ const Home: NextPage<Props> = ({ stores }) => {
 };
 
 export default Home;
-/*
-export async function getStaticProps() {
-  const stores = await (
-    await import(`${process.env.NEXT_PUBLIC_DB_URL}`)
-  ).default;
-
-  return {
-    props: { stores },
-  };
-}*/
 
 export async function getServerSideProps() {
   try {
