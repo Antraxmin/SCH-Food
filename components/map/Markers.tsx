@@ -29,9 +29,6 @@ const Markers = () => {
               size: new naver.maps.Size(38, 58),
               anchor: new naver.maps.Point(19, 58),
             }}*/
-            onClick={() => {
-              setCurrentStore(store); // 클릭한 식당의 전역 상태 update
-            }}
           />
         );
       })}

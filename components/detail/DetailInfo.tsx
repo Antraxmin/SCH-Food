@@ -41,17 +41,17 @@ const DetailInfo = ({ currentStore }: Props) => {
           </label>
           <input type="checkbox" id="map-modal" className="modal-toggle" />
           <div className="modal">
-            <div className="modal-box relative w-96 m-auto h-96">
+            <div className="modal-box relative w-80 m-auto">
               <label
                 htmlFor="map-modal"
                 className="btn btn-sm btn-circle absolute right-2 top-2"
               >
                 ✕
               </label>
-              <h3 className="text-lg font-bold">위치 확인하기</h3>
-              <div className="w-80 m-auto">
-                <MapSection />
-              </div>
+              <h3 className="text-lg font-bold">
+                지도 기능은 현재 개발중이에요!
+              </h3>
+              <p className="py-4">빠른 시일 내 제공하겠습니다 🔥</p>
             </div>
           </div>
           <label className="btn btn-ghost btn-circle shadow-md shadow-gray-300">

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import type { Marker } from "../../types/map";
 
-const Marker = ({ map, coordinates, onClick }: Marker): null => {
+const Marker = ({ map, coordinates }: Marker): null => {
   useEffect(() => {
     let marker: naver.maps.Marker | null = null;
     // 지도 객체가 존재한다면 새로운 마커 객체 생성
@@ -12,9 +12,7 @@ const Marker = ({ map, coordinates, onClick }: Marker): null => {
         //icon,
       });
     }
-    if (onClick) {
-      naver.maps.Event.addListener(marker, "clicked!", onClick);
-    }
+
     return () => {
       marker?.setMap(null);
     };
