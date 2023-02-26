@@ -34,8 +34,9 @@ const DetailInfo = ({ currentStore }: Props) => {
               className=""
               onClick={() => {
                 copy(location.origin + "/" + currentStore.name);
+                alert("클립보드에 복사되었습니다");
               }}
-              aria-label="클립보드에 복사했어요!"
+              aria-label="copy to clipboard"
             >
               <AiOutlineShareAlt size={20} color="#444444" />
             </button>
