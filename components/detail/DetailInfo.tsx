@@ -1,6 +1,8 @@
 import { Store } from "@/types/store";
 import { AiOutlineShareAlt } from "react-icons/ai";
+import { IoLocationOutline } from "react-icons/io5";
 import copy from "copy-to-clipboard";
+import MapSection from "../map/MapSection";
 
 type Props = {
   currentStore?: Store;
@@ -29,7 +31,30 @@ const DetailInfo = ({ currentStore }: Props) => {
           </div>
         </div>
         <div className="card-actions justify-end">
-          <label className="btn btn-ghost btn-circle">
+          <label
+            htmlFor="map-modal"
+            className="btn btn-ghost btn-circle shadow-md shadow-gray-300"
+          >
+            <button>
+              <IoLocationOutline size={20} color="#444444" />
+            </button>
+          </label>
+          <input type="checkbox" id="map-modal" className="modal-toggle" />
+          <div className="modal">
+            <div className="modal-box relative w-96 m-auto h-96">
+              <label
+                htmlFor="map-modal"
+                className="btn btn-sm btn-circle absolute right-2 top-2"
+              >
+                ✕
+              </label>
+              <h3 className="text-lg font-bold">위치 확인하기</h3>
+              <div className="w-80 m-auto">
+                <MapSection />
+              </div>
+            </div>
+          </div>
+          <label className="btn btn-ghost btn-circle shadow-md shadow-gray-300">
             <button
               className=""
               onClick={() => {
