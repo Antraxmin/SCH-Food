@@ -9,9 +9,9 @@ export default function Home() {
       <Header />
       <main className="flex-1 mt-16 h-screen">
         <div className="bg-gray-200 w-10 m-auto top-8 p-5"></div>
-        <div className="bg-white w-4/5 m-auto top-8 p-5">
-          안녕하세요! 순천향대 맛집알리미 개발자인
-          <br /> 컴퓨터소프트웨어공학과 21학번 임채민입니다.
+        <div className="bg-white w-4/5 m-auto top-8 p-5 shadow-md rounded-md">
+          안녕하세요! 순천향대 맛집알리미 개발자인 컴퓨터소프트웨어공학과 21학번
+          임채민입니다.
           <br />
           <br />
           먼저 서비스를 이용해주셔서 감사하다는 말씀을 전하고 싶습니다.
