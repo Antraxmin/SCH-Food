@@ -1,4 +1,6 @@
 import { Store } from "@/types/store";
+import { AiOutlineShareAlt } from "react-icons/ai";
+import copy from "copy-to-clipboard";
 
 type Props = {
   currentStore?: Store;
@@ -26,7 +28,19 @@ const DetailInfo = ({ currentStore }: Props) => {
             {currentStore.phone}
           </div>
         </div>
-        <div className="card-actions justify-end">공유</div>
+        <div className="card-actions justify-end">
+          <label className="btn btn-ghost btn-circle">
+            <button
+              className=""
+              onClick={() => {
+                copy(location.origin + "/" + currentStore.name);
+              }}
+              aria-label="클립보드에 복사했어요!"
+            >
+              <AiOutlineShareAlt size={20} color="#444444" />
+            </button>
+          </label>
+        </div>
       </div>
     </div>
   );
