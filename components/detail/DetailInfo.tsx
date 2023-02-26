@@ -11,7 +11,7 @@ type Props = {
 const DetailInfo = ({ currentStore }: Props) => {
   if (!currentStore) return null;
   return (
-    <div className="card w-full bg-base-100 shadow-md rounded-b-lg ">
+    <div className="card w-full bg-white shadow-md rounded-b-lg ">
       <div className="card-body gap-1 py-6 pb-4 px-6">
         <h2 className="card-title mb-2">{currentStore.name}</h2>
         <div className="flex float-left">
