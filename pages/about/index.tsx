@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Fragment>
       <Header />
-      <main className="flex-1 mt-16 h-screen">
+      <main className="flex-1 mt-16 h-full">
         <div className="bg-gray-200 w-10 m-auto top-8 p-5"></div>
         <div className="bg-white w-4/5 m-auto top-8 p-5 shadow-md rounded-md">
           안녕하세요! 순천향대 맛집알리미 개발자인 컴퓨터소프트웨어공학과 21학번
@@ -23,8 +23,11 @@ export default function Home() {
           쉽게 얻었으면 하는 마음에서 개발하였습니다.
           <br />
           <br />
-          개발자 본인이 먹는 것을 굉장히 좋아하기에 지속적인 업데이트 및 빠른
-          피드백을 약속드릴 수 있습니다.
+          출시 후에도 지속적인 업데이트 및 빠른 피드백을 약속드릴 수 있습니다.
+          <br />
+          <br />
+          또한 아직 추가되지 않은 식당들은 며칠 내로 모두 등록될 예정이니 조금만
+          기다려 주시면 감사하겠습니다.
           <br />
           <br /> 무엇보다 순천향대 주변 인프라가 더 활성화되기를 기원하며
           서비스를 운영해 나갈 예정입니다😀
@@ -32,7 +35,7 @@ export default function Home() {
           <br /> 앞으로도 많은 관심과 이용 부탁드립니다!
         </div>
         <div className="bg-gray-200 w-full m-auto top-8 p-2"></div>
-        <div className=" items-center flex justify-contents">
+        <div className=" items-center flex justify-contents pb-5">
           <button
             className="btn gap-2 m-auto items-center"
             onClick={() => {
