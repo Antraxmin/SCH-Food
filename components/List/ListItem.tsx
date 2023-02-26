@@ -15,7 +15,7 @@ const ListItem = ({
         <li className=" py-3 mx-2 flex  items-center bg-white mt-1 mb-3 p-2 hover:bg-gray-100 rounded-xl cursor-pointer transition h-28 pr-4 shadow-md mx-3 shadow-gray-300 ">
           <div className="img ml-2  h-full">
             <img
-              className="w-28 h-full rounded-xl"
+              className="w-28 min-w-[110px] h-full rounded-xl"
               src={topimg}
               alt={""}
               width={50}
