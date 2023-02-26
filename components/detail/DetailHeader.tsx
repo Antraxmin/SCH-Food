@@ -10,7 +10,7 @@ const DetailHeader = ({ currentStore }: Props) => {
   const router = useRouter();
   if (!currentStore) return null;
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-white">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
