@@ -14,7 +14,7 @@ export default function UnivCategory() {
     <div className="fixed z-30 flex justify-center w-full max-w-md mt-12 overflow-auto bg-white menubox top-4">
       <ul className="bg-white menu menu-horizontal">
         <li>
-          <Link href={`/univ/category/${"향1"}`}>향설1관</Link>
+          <Link href={"/univ/category/src"}>향설1관</Link>
         </li>
         <li>
           <Link href={`/univ/category/${"향2"}`}>향설2관</Link>
