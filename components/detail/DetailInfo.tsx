@@ -35,9 +35,7 @@ const DetailInfo = ({ currentStore }: Props) => {
             htmlFor="map-modal"
             className="btn btn-ghost btn-circle shadow-md shadow-gray-300"
           >
-            <button>
-              <IoLocationOutline size={20} color="#444444" />
-            </button>
+            <IoLocationOutline size={20} color="#444444" />
           </label>
           <input type="checkbox" id="map-modal" className="modal-toggle" />
           <div className="modal">
