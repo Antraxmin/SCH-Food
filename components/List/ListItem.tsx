@@ -23,7 +23,7 @@ const ListItem = ({
             />
           </div>
           <div className="title flex flex-col pl-5 ">
-            <span className="text-xl text-black">{name}</span>
+            <span className="text-md text-black">{name}</span>
             <span className="text-sm text-gray-400 truncate w-60 mt-3">
               {description}
             </span>

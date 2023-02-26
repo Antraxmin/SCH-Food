@@ -14,7 +14,7 @@ const ListSection = () => {
 
   if (!stores) return null;
   return (
-    <div className=" bg-gray-200 mt-[110px] z-2 pt-2">
+    <div className=" bg-gray-200 mt-[110px] z-2 pt-2 pb-16">
       {stores.map((store) => {
         return (
           <ListItem
