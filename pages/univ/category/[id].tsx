@@ -1,12 +1,12 @@
-import BottomNav from "@/components/common/BottomNav";
 import Header from "@/components/common/Header";
-import ListSection from "@/components/List/ListSection";
 import useStore from "@/hooks/useStore";
 import clientPromise from "@/lib/mongodb";
 import { Store } from "@/types/store";
 import { GetServerSidePropsContext, NextPage } from "next";
 import { Fragment, useEffect } from "react";
-import UnivCategory from "@/components/univ/Category";
+import UnivCategory from "@/components/univ/UnivCategory";
+import UnivListSection from "@/components/univ/UnivListSection";
+import UnivBottomNav from "@/components/univ/UnivBottomNav";
 
 interface Props {
   store: Store[];
@@ -26,9 +26,9 @@ const UnivList: NextPage<Props> = ({ store }) => {
         <UnivCategory />
         {/*<MapSection />*/}
         <main className="flex-1 pt-28 top-28 h-screen pt-[1px] overflow-auto  ">
-          <ListSection />
+          <UnivListSection />
         </main>
-        <BottomNav />
+        <UnivBottomNav />
       </div>
     </Fragment>
   );
