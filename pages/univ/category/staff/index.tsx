@@ -1,23 +1,29 @@
 import Header from "@/components/common/Header";
-import { Store } from "@/types/store";
+import { Staff } from "@/types/store";
 import { NextPage } from "next";
 import { Fragment, useEffect } from "react";
 import UnivCategory from "@/components/univ/UnivCategory";
 import UnivBottomNav from "@/components/univ/UnivBottomNav";
-import SrcListSection from "@/components/univ/src/SrcListSection";
 import StaffListSection from "@/components/univ/staff/StaffListSection";
+import useStaff from "@/hooks/useStaff";
+import clientPromise from "@/lib/mongodb";
 
 interface Props {
-  stores: Store[];
+  store: Staff[];
 }
 
-const StaffMenu: NextPage<Props> = () => {
+const StaffMenu: NextPage<Props> = ({ store }: Props) => {
+  const { initializeStaff } = useStaff();
+
+  useEffect(() => {
+    initializeStaff(store[0]);
+  }, [initializeStaff, store[0]]);
+
   return (
     <Fragment>
       <div className="w-full ">
         <Header />
         <UnivCategory />
-        {/*<MapSection />*/}
         <main className="flex-1 pt-28 top-28 h-screen pt-[1px] overflow-auto  ">
           <StaffListSection />
         </main>
@@ -28,3 +34,17 @@ const StaffMenu: NextPage<Props> = () => {
 };
 
 export default StaffMenu;
+
+export async function getServerSideProps() {
+  try {
+    const client = await clientPromise;
+    const db = client.db(`${process.env.DB_NAME}`);
+
+    const stores = await db.collection("staff").find({}).toArray();
+    return {
+      props: { store: JSON.parse(JSON.stringify(stores)) },
+    };
+  } catch (e) {
+    console.error(e);
+  }
+}
