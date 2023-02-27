@@ -23,7 +23,9 @@ export type Src = {
   name: string;
   date: string;
   price: string;
-  hours: string;
+  breakTime: string;
+  lunchTime: string;
+  dinnerTime: string;
   break: string[];
   lunch: string[];
   dinner: string[];
