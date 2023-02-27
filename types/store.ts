@@ -19,7 +19,20 @@ export type Store = {
   onClick?: () => void;
 };
 
-export type Kind = {
+export type Src = {
   name: string;
-  onClick?: () => void;
+  date: string;
+  price: string;
+  hours: string;
+  break: string[];
+  lunch: string[];
+  dinner: string[];
+};
+
+export type Staff = {
+  name: string;
+  date: string;
+  price: string;
+  hours: string;
+  lunch: string[];
 };
