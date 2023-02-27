@@ -36,6 +36,5 @@ export type Staff = {
   date: string;
   price: string;
   time: string;
-  hours: string;
   lunch: string[];
 };
