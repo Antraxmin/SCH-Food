@@ -10,15 +10,15 @@ import useStore from "@/hooks/useStore";
 import useSrc from "@/hooks/useSrc";
 
 interface Props {
-  store: Src;
+  store: Src[];
 }
 
-const SrcMenu: NextPage<Props> = ({ store }) => {
+const SrcMenu: NextPage<Props> = ({ store }: Props) => {
   const { initializeSrc } = useSrc();
 
   useEffect(() => {
-    initializeSrc(store);
-  }, [initializeSrc, store]);
+    initializeSrc(store[0]);
+  }, [initializeSrc, store[0]]);
 
   return (
     <Fragment>
