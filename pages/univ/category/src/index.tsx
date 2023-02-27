@@ -1,22 +1,30 @@
 import Header from "@/components/common/Header";
-import { Store } from "@/types/store";
+import { Src, Store } from "@/types/store";
 import { NextPage } from "next";
 import { Fragment, useEffect } from "react";
 import UnivCategory from "@/components/univ/UnivCategory";
 import UnivBottomNav from "@/components/univ/UnivBottomNav";
 import SrcListSection from "@/components/univ/src/SrcListSection";
+import clientPromise from "@/lib/mongodb";
+import useStore from "@/hooks/useStore";
+import useSrc from "@/hooks/useSrc";
 
 interface Props {
-  stores: Store[];
+  store: Src;
 }
 
-const SrcMenu: NextPage<Props> = () => {
+const SrcMenu: NextPage<Props> = ({ store }) => {
+  const { initializeSrc } = useSrc();
+
+  useEffect(() => {
+    initializeSrc(store);
+  }, [initializeSrc, store]);
+
   return (
     <Fragment>
       <div className="w-full ">
         <Header />
         <UnivCategory />
-        {/*<MapSection />*/}
         <main className="flex-1 pt-28 top-28 h-screen pt-[1px] overflow-auto  ">
           <SrcListSection />
         </main>
@@ -27,3 +35,17 @@ const SrcMenu: NextPage<Props> = () => {
 };
 
 export default SrcMenu;
+
+export async function getServerSideProps() {
+  try {
+    const client = await clientPromise;
+    const db = client.db(`${process.env.DB_NAME}`);
+
+    const stores = await db.collection("src").find({}).toArray();
+    return {
+      props: { store: JSON.parse(JSON.stringify(stores)) },
+    };
+  } catch (e) {
+    console.error(e);
+  }
+}
