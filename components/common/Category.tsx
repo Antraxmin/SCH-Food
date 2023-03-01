@@ -14,6 +14,9 @@ export default function Category() {
     <div className="menubox w-full justify-center bg-white mt-12 fixed top-4 z-30 max-w-md overflow-auto">
       <ul className="menu menu-horizontal bg-white">
         <li>
+          <Link href={"/category/all"}>전체</Link>
+        </li>
+        <li>
           <Link href={`/category/${"한식"}`}>한식</Link>
         </li>
         <li>
