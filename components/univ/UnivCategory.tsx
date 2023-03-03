@@ -25,6 +25,9 @@ export default function UnivCategory() {
         <li>
           <Link href={"/univ/category/staff"}>교직원식당</Link>
         </li>
+        <li>
+          <Link href={`/univ/category/${"교내카페"}`}>교내카페</Link>
+        </li>
       </ul>
     </div>
   );
