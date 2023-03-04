@@ -1,3 +1,7 @@
 .menubox::-webkit-scrollbar {
   display: none;
 }
+
+.univmenubox::-webkit-scrollbar {
+  display: none;
+}

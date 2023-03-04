@@ -11,9 +11,9 @@ export default function UnivCategory() {
   const router = useRouter();
 
   return (
-    <div className="fixed z-30 flex justify-center w-full max-w-md mt-12 overflow-auto bg-white menubox top-4">
+    <div className="univmenubox w-full justify-center bg-white mt-12 fixed top-4 z-30 max-w-md overflow-auto">
       <ul className="bg-white menu menu-horizontal">
-        <li>
+        <li className="px-0">
           <Link href={"/univ/category/src"}>향설1관</Link>
         </li>
         <li>
