@@ -8,6 +8,7 @@ const nextConfig = {
       "search.pstatic.net",
       "myplace-phinf.pstatic.net",
       "pup-review-phinf.pstatic.net",
+      "postfiles.pstatic.net",
     ],
   },
 };
