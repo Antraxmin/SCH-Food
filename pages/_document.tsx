@@ -6,7 +6,7 @@ export default function Document() {
     <Html lang="ko">
       <Head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6656698385318639"
-     crossorigin="anonymous"></script>
+     crossOrigin="anonymous"></script>
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-format="fluid"
